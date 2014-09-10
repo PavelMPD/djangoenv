@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+{% load staticfiles %}
+
+{% block body %}
+<div class="large-6 columns">
+    {% for article in articles %}
+        <div>
+            <div>Дата публикации: {{ article.date }}</div>
+            <div><a href="/articles/get/{{ article.id }}/">{{ article.title }}</a></div>
+            <div>{{ article.text }}</div>
+            <div><a href="/articles/addlike/{{ article.id }}"><img src="{% static 'animated-overlay.gif' %}" width="15px" height="15px"></a>{{ article.likes }}</div>
+        </div>
+        <hr/>
+    {% endfor %}
+</div>
+{% endblock %}

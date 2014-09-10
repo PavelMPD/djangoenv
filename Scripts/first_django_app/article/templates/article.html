@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <div class="large-6 columns">
+        <div>Дата публикации: {{ article.date }}</div>
+        <div>{{ article.title }}</div>
+        <div>{{ article.text }}</div>
+        <div>{{ article.likes }}</div>
+        <div class="large-offset-1">
+            <div>Comments:</div>
+            <table>
+                {% for comment in comments %}
+                    <tr>
+                        <td>{{ comment.text }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <div class="large-offset-2">
+            <form action="/articles/addcomment/{{ article.id }}/" method="post">
+                {% csrf_token %}
+                {{ form }}
+                <input type="submit" class="button" value="Add comment">
+            </form>
+        </div>
+    </div>
+{% endblock %}
