@@ -43,19 +43,27 @@ def article(request, id=1):
 def addlike(request, id):
     try:
         article = Article.objects.get(id=id)
-        article.likes += 1
+        if id in request.COOKIES:
+            article.likes -= 1
+        else:
+            article.likes += 1
         article.save()
+        response = redirect('/articles/all')
+        response.set_cookie(id, 'test')
+        return response
     except ObjectDoesNotExist:
         raise Http404
     return redirect('/articles/all')
 
 
 def addcomment(request, id):
-    if request.POST:
+    if request.POST and ('pause' not in request.session):
         form = CommentForm(request.POST)
         if form.is_valid():
             comment = form.save(commit=False)
             comment.article = Article.objects.get(id=id)
             comment.save()
+            request.session.set_expiry(30)
+            request.session['pause'] = True
     return redirect('/articles/get/{}'.format(id))
 
