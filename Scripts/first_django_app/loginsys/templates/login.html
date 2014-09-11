@@ -1,6 +1,6 @@
 {% extends 'layout.html' %}
 
-{% block login %}
+{% block body %}
     <div class="large-offset-3 large-6 columns">
         <form action="/auth/login/" method="post">
             {% csrf_token %}
@@ -12,6 +12,7 @@
                 <label class="error">{{ login_error }}</label>
             {% endif %}
             <input class="button radius" type="submit" value="Login">
+            <div class="label round secondary"><a href="/auth/registration/">Create an account</a></div>
         </form>
     </div>
 {% endblock %}

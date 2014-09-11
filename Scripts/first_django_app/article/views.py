@@ -8,6 +8,7 @@ from django.core.exceptions import ObjectDoesNotExist
 from forms import CommentForm
 from django.core.context_processors import csrf
 from django.contrib import auth
+from django.core.paginator import Paginator
 
 # Create your views here.
 def basic_one(request):
@@ -28,8 +29,10 @@ def second_view(request):
     return render_to_response('first_view.html', {'name': view})
 
 
-def articles(request):
-    return render_to_response('articles.html', {'articles': Article.objects.all(), 'username': auth.get_user(request).username})
+def articles(request, page_number = 1):
+    articles = Article.objects.all()
+    paginator = Paginator(articles, 3)
+    return render_to_response('articles.html', {'articles': paginator.page(page_number), 'username': auth.get_user(request).username})
 
 
 def article(request, id=1):

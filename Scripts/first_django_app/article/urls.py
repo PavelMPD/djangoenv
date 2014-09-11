@@ -12,4 +12,5 @@ urlpatterns = patterns('',
     url(r'^get/(?P<id>\d+)/$', 'article.views.article'),
     url(r'^addlike/(?P<id>\d+)/$', 'article.views.addlike'),
     url(r'^addcomment/(?P<id>\d+)/$', 'article.views.addcomment'),
+    url(r'^page/(\d+)/$', 'article.views.articles'),
 )
