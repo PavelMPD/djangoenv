@@ -21,3 +21,9 @@
 /Scripts/first_django_app/first_django_app/settings.pyc
 /Scripts/first_django_app/first_django_app/urls.pyc
 /Scripts/first_django_app/first_django_app/wsgi.pyc
+/Scripts/first_django_app/loginsys/__init__.pyc
+/Scripts/first_django_app/loginsys/admin.pyc
+/Scripts/first_django_app/loginsys/migrations/__init__.pyc
+/Scripts/first_django_app/loginsys/models.pyc
+/Scripts/first_django_app/loginsys/urls.pyc
+/Scripts/first_django_app/loginsys/views.pyc

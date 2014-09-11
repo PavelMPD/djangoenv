@@ -8,9 +8,20 @@
     <link rel="stylesheet" type="text/css" href="{% static 'static/foundation/css/foundation.css' %}">
 </head>
 <body>
-    <h2>Главное меню</h2>
+    <div class="top-bar">
+        <section class="top-bar-section">
+            <ul class="right">
+                {% if username %}
+                    <li><a href="/auth/logout/">Logout ({{ username }})</a></li>
+                {% else %}
+                    <li><a href="/auth/login/">Login</a></li>
+                {% endif %}
+            </ul>
+        </section>
+    </div>
     <div class="row">
         {% block body %}{% endblock %}
+        {% block login %}{% endblock %}
     </div>
 </body>
 </html>
