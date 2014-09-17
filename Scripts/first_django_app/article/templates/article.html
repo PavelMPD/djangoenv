@@ -12,6 +12,8 @@
                 {% for comment in comments %}
                     <tr>
                         <td>{{ comment.text }}</td>
+                        <td>{{ comment.user.username }}</td>
+                        <td>{{ comment.date }}</td>
                     </tr>
                 {% endfor %}
             </table>

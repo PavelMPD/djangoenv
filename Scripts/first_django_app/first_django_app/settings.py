@@ -30,6 +30,7 @@ TEMPLATE_DIRS = (
     'templates',
     'article/templates',
     'loginsys/templates',
+    'notebook/templates',
 )
 
 # Application definition
@@ -43,6 +44,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'article',
     'loginsys',
+    'notebook',
 )
 
 MIDDLEWARE_CLASSES = (

@@ -27,3 +27,12 @@
 /Scripts/first_django_app/loginsys/models.pyc
 /Scripts/first_django_app/loginsys/urls.pyc
 /Scripts/first_django_app/loginsys/views.pyc
+/Scripts/first_django_app/article/migrations/0003_auto_20140912_1202.pyc
+/Scripts/first_django_app/article/migrations/0004_comments_user.pyc
+/Scripts/first_django_app/article/migrations/0005_comments_date.pyc
+/Scripts/first_django_app/notebook/__init__.pyc
+/Scripts/first_django_app/notebook/migrations/__init__.pyc
+/Scripts/first_django_app/notebook/admin.pyc
+/Scripts/first_django_app/notebook/models.pyc
+/Scripts/first_django_app/notebook/urls.pyc
+/Scripts/first_django_app/notebook/views.pyc

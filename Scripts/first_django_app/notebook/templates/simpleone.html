@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+{% load staticfiles %}
+
+{% block body %}
+    <div>
+        <div>Notebook</div>
+        <button id="simple-button" class="button radius">Simple button</button>
+    </div>
+{% endblock %}
+{% block javasctipt %}
+    <script type="application/javascript" src="{% static 'js/simpleone.js' %}"></script>
+{% endblock %}
