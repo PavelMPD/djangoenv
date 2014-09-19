@@ -1,0 +1,38 @@
+{% extends 'layout.html' %}
+{% load staticfiles %}
+
+{% block body %}
+    <div>
+        <div>Backbone view</div>
+        <div id="article">
+            <!--Сюда будет добавлен шаблон-->
+        </div>
+    </div>
+{% endblock %}
+{% block javasctipt %}
+    <script type="application/javascript" src="{% static 'js/article_model.js' %}"></script>
+    <script type="application/javascript" src="{% static 'js/article_view.js' %}"></script>
+    <script type="application/javascript" src="{% static 'js/bbview.js' %}"></script>
+    <script type="text/template" id="article-template">
+        <div>Article</div>
+        <div class="large-5 columns">
+            <div class="row">
+                <div class="large-3 columns">Name</div>
+                <div class="columns large-9"><input class="name" type="text" value="<%= name %>"></div>
+            </div>
+            <div class="row">
+                <div class="large-4 columns"><button class="change-size button radius" data-rel="-10">-</button></div>
+                <div class="large-4 columns"><input class="size" type="number" value="<%= size %>"></div>
+                <div class="large-4 columns"><button class="change-size button radius" data-rel="10">+</button></div>
+            </div>
+            <div class="row">
+                <div class="large-3 columns">Remove</div>
+                <div class="large-9 columns"><button class="delete-row button radius">x</button></div>
+            </div>
+            <div class="row">
+                <div class="large-3 columns">Description</div>
+                <div class="desc large-9 columns"><%= description %></div>
+            </div>
+        </div>
+    </script>
+{% endblock %}

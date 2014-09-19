@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+{% load staticfiles %}
+
+{% block body %}
+    <div>
+        <div>Backbone collection</div>
+        <div id="article">
+        </div>
+    </div>
+{% endblock %}
+{% block javasctipt %}
+    <script type="application/javascript" src="{% static 'js/bbcollection.js' %}"></script>
+{% endblock %}

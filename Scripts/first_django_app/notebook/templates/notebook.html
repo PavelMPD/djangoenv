@@ -1,7 +1,27 @@
 {% extends 'layout.html' %}
+{% load staticfiles %}
 
 {% block body %}
-    <div>
-        <div>Notebook</div>
+    <div class="large-8 columns" id="notebook-container">
+
     </div>
+{% endblock %}
+{% block javasctipt %}
+    <script type="application/javascript" src="{% static 'js/notebook_model.js' %}"></script>
+    <script type="application/javascript" src="{% static 'js/notebook_row_view.js' %}"></script>
+    <script type="application/javascript" src="{% static 'js/notebook_view.js' %}"></script>
+    <script type="application/javascript" src="{% static 'js/notebook.js' %}"></script>
+    <script type="text/template" id="notebook-template">
+        <h2>Notebook</h2>
+        <button class="button radius add-notebook-row">Add note</button>
+        <div class="notebook-row-list"></div>
+    </script>
+    <script type="text/template" id="notebook-row-template">
+        <table>
+            <row>
+                <td><input class="description" type="text" value="<%- description %>"></td>
+                <td><button class="delete-row button radius">Delete</button></td>
+            </row>
+        </table>
+    </script>
 {% endblock %}

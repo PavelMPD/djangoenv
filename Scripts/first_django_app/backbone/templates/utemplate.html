@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+{% load staticfiles %}
+
+{% block body %}
+    <div>
+        <div>Underscore template</div>
+        <div id="article">
+            <!--Сюда будет добавлен шаблон-->
+        </div>
+    </div>
+{% endblock %}
+{% block javasctipt %}
+    <script type="application/javascript" src="{% static 'js/utemplate.js' %}"></script>
+    <script type="text/template" id="article-template">
+        <div>Article</div>
+        <div>Name: <%= name %></div>
+        <div>Size: <%= size %></div>
+        <div>Color: <%= color %></div>
+        <% if (nice == true) { %>
+            <div>Nice: <%= nice %></div>
+        <% } %>
+    </script>
+{% endblock %}

@@ -30,6 +30,7 @@ TEMPLATE_DIRS = (
     'templates',
     'article/templates',
     'loginsys/templates',
+    'backbone/templates',
     'notebook/templates',
 )
 
@@ -44,6 +45,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'article',
     'loginsys',
+    'backbone',
     'notebook',
 )
 

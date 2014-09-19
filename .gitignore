@@ -36,3 +36,9 @@
 /Scripts/first_django_app/notebook/models.pyc
 /Scripts/first_django_app/notebook/urls.pyc
 /Scripts/first_django_app/notebook/views.pyc
+/Scripts/first_django_app/backbone/__init__.pyc
+/Scripts/first_django_app/backbone/migrations/__init__.pyc
+/Scripts/first_django_app/backbone/admin.pyc
+/Scripts/first_django_app/backbone/models.pyc
+/Scripts/first_django_app/backbone/urls.pyc
+/Scripts/first_django_app/backbone/views.pyc
