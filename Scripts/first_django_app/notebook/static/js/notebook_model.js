@@ -14,4 +14,11 @@ var NotebookRowModel = Backbone.Model.extend({
 
 var NotebookModel = Backbone.Collection.extend({
     model: NotebookRowModel
+    //,sortParam: 'status'
+    //,sortMode: 1//1 - обычный порядок, -1 обратный порядок
+    ,comparator: function(a,b) {
+        //if (a.get(this.sortParam) > b.get(this.sortParam)) return -1*this.sortMode;
+        //if (a.get(this.sortParam) < b.get(this.sortParam)) return this.sortMode;
+        return 0
+    }
 })

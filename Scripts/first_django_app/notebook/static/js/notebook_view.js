@@ -1,6 +1,8 @@
 var NotebookView = Backbone.View.extend({
     events: {
         "click .add-notebook-row":    "add_notebook_row" //ко всем елементам с class = add-notebook-row добавляется событие add_notebook_row
+        ,"click .to-json": "to_json"
+        ,"click [data-sort]": "render_list" //привязка события к атрибуту (позволяет передавать его значение в функцию)
     }
     ,initialize: function(){
         console.log('NotebookView initialize')
@@ -23,14 +25,30 @@ var NotebookView = Backbone.View.extend({
         //this.$('.rockets-count')//доступ к элементам страницы
     }
     ,add_notebook_row: function(){
-        console.log('add_notebook_row')
+        console.log('NotebookView add_notebook_row')
         //добавляет в коллекцию новый элемент, тем самым генерируя событие "add", которое в свою очередь вызывает метод add_one_row
         this.coll.add({})
     }
     ,add_one_row: function(model){
-        console.log('add_one_row')
+        console.log('NotebookView add_one_row')
         //создается view NotebookRowView и передается объект модели NotebookRowModel
         var view = new NotebookRowView({model: model})
         this.$('.notebook-row-list').append(view.render())//в объекте модели вызывается метод render, результат метода отрисовывается во всех елементах страницы с class = notebook-row-list
+    }
+    ,to_json: function() {
+        console.log('NotebookView to_json')
+        var json = this.coll.toJSON()
+        this.$('.json-out').html(JSON.stringify(json))
+    }
+    ,render_list: function (e) {
+        console.log('NotebookView render_list')
+        this.$('.notebook-row-list').html('');
+        //this.coll.sortParam = $(e.target).attr('data-sort');
+        //this.coll.sortMode = this.coll.sortMode*(-1);
+        this.coll.sort();
+        var that = this;
+        this.coll.each(function(model,index){
+            that.add_one_row(model);
+        });
     }
 })

@@ -22,8 +22,9 @@ var NotebookRowView = Backbone.View.extend({
     ,edit_value: function(){
         console.log('NotebookRowView edit_value')
         var res = this.model.set({
-            description: this.$('.description').text()
+            description: this.$('.description').val()
         },{validate: true});
         if (!res) this.render();
+        console.log(this.model.toJSON())
     }
 })
