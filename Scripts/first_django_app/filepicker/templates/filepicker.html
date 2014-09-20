@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+{% load staticfiles %}
+
+{% block body %}
+    <div>
+        <div>
+            <h1>Filepicker.io Django Library - Demo page</h1>
+                    {%if message%}<p>{{message}}</p>{%endif%}
+                    <form method="post" action="">
+                        {%csrf_token%}
+                        {{ form.as_p }}
+                        <p><input type="submit" value="Submit"/></p>
+                    </form>
+        </div>
+        <div>
+            <iframe name="filepicker_dialog" id="filepicker_dialog" border="0" frameborder="0" marginwidth="0" marginheight="0" src="https://dialog.filepicker.io/dialog/open/?key=l5uQ3k7FQ5GoYCHyTdZV&amp;id=1411222481267&amp;referrer=www.filepicker.io&amp;iframe=true&amp;version=v1&amp;m=image/*" style="width: 100%; height: 468px; border: none; position: relative;"></iframe>
+        </div>
+    </div>
+{% endblock %}

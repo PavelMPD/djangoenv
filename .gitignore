@@ -42,3 +42,10 @@
 /Scripts/first_django_app/backbone/models.pyc
 /Scripts/first_django_app/backbone/urls.pyc
 /Scripts/first_django_app/backbone/views.pyc
+/Scripts/first_django_app/filepicker/views.pyc
+/Scripts/first_django_app/filepicker/__init__.pyc
+/Scripts/first_django_app/filepicker/admin.pyc
+/Scripts/first_django_app/filepicker/forms.pyc
+/Scripts/first_django_app/filepicker/migrations/__init__.pyc
+/Scripts/first_django_app/filepicker/models.pyc
+/Scripts/first_django_app/filepicker/urls.pyc

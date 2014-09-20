@@ -12,4 +12,5 @@ urlpatterns = patterns('',
     url(r'^auth/', include('loginsys.urls')),
     url(r'^backbone/', include('backbone.urls')),
     url(r'^notebook/', include('notebook.urls')),
+    url(r'^filepicker/', include('filepicker.urls')),
 )
