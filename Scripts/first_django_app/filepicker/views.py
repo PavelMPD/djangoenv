@@ -27,3 +27,11 @@ def view(request):
         form = TestModelForm()
 
     return render(request, "filepicker.html", {'form': form, 'message': message})
+
+
+def test(request):
+    return render(request, "test.html")
+
+
+def widget(request):
+    return render(request, "widget.html")

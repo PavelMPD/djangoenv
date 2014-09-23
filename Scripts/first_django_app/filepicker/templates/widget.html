@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+{% load staticfiles %}
+
+{% block body %}
+    <div>
+        <input id="upload-input" type="filepicker-dragdrop" data-fp-services="COMPUTER,BOX" data-fp-apikey="l5uQ3k7FQ5GoYCHyTdZV" data-fp-mimetypes="*/*" data-fp-container="modal" onchange="upload_file(event.fpfile.url)">
+    </div>
+{% endblock %}
+{% block javasctipt %}
+    <script type="text/javascript" src="//api.filepicker.io/v1/filepicker.js"></script>
+    <script type="text/javascript" src="{% static 'js/widget.js' %}"></script>
+{% endblock %}

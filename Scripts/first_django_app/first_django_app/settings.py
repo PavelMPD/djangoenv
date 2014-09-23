@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
-FILEPICKER_API_KEY = 'A9gfeq0CMTMeP1dR86vcxz'
+FILEPICKER_API_KEY = 'l5uQ3k7FQ5GoYCHyTdZV'
 #FILEPICKER_API_KEY = '8PbzrhP9Tr2r6wPlSqzS'
 CWD = os.getcwd()
 MEDIA_ROOT = os.path.join(CWD, 'media')

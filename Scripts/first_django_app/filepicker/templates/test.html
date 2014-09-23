@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+{% load staticfiles %}
+
+{% block body %}
+    <div>
+        <button id="btn-open">Open</button>
+    </div>
+    {% comment %}<div>
+        <iframe name="filepicker_dialog" id="filepicker_dialog" border="0" frameborder="0" marginwidth="0" marginheight="0" src="https://dialog.filepicker.io/dialog/open/?key=l5uQ3k7FQ5GoYCHyTdZV&amp;id=1411222481267&amp;referrer=www.filepicker.io&amp;iframe=true&amp;version=v1&amp;m=image/*" style="width: 100%; height: 468px; border: none; position: relative;"></iframe>
+    </div>{% endcomment %}
+{% endblock %}
+{% block javasctipt %}
+    <script type="text/javascript" src="//api.filepicker.io/v1/filepicker.js"></script>
+    <script type="text/javascript" src="{% static 'js/test.js' %}"></script>
+{% endblock %}
