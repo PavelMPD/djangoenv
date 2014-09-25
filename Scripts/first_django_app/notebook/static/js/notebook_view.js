@@ -3,6 +3,7 @@ var NotebookView = Backbone.View.extend({
         "click .add-notebook-row":    "add_notebook_row" //ко всем елементам с class = add-notebook-row добавляется событие add_notebook_row
         ,"click .to-json": "to_json"
         ,"click [data-sort]": "render_list" //привязка события к атрибуту (позволяет передавать его значение в функцию)
+        ,"click .model-save": "model_save"
     }
     ,initialize: function(){
         console.log('NotebookView initialize')
@@ -16,6 +17,8 @@ var NotebookView = Backbone.View.extend({
         this.listenTo(this.coll, "all", this.render)
         //добавляем событие на прослушивание добавления нового елемента в коллекцию
         this.listenTo(this.coll, "add", this.add_one_row)
+        //запрашивает с сервера данные
+        this.coll.fetch();
     }
     ,render: function(){
         console.log('NotebookView render')
@@ -49,6 +52,12 @@ var NotebookView = Backbone.View.extend({
         var that = this;
         this.coll.each(function(model,index){
             that.add_one_row(model);
-        });
+        })
+    }
+    ,model_save: function(){
+        console.log('NotebookView model_save')
+        this.coll.each(function(obj,index){
+            obj.save()
+        })//проход по всем элементам коллекции и отправляет для каждого запрос на сохранение
     }
 })

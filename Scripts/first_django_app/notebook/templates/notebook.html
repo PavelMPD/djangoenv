@@ -2,6 +2,7 @@
 {% load staticfiles %}
 
 {% block body %}
+    {% csrf_token %}
     <div class="large-8 columns" id="notebook-container">
 
     </div>
@@ -18,6 +19,7 @@
         <button data-sort="status" class="button radius">Sort</button>
         <pre class="json-out"></pre>
         <div class="notebook-row-list"></div>
+        <button class="button radius model-save">Save</button>
     </script>
     <script type="text/template" id="notebook-row-template">
         <table>
