@@ -2,7 +2,7 @@ $(function () {
         //создается объект
         var object = {};
 
-        //_ - подчеркивание - это вызов библиотеки backbone
+        //_ - подчеркивание - это вызов библиотеки mybackbone
         //расширяем объект возможностями объекта Backbone.Events
         _.extend(object, Backbone.Events);
 

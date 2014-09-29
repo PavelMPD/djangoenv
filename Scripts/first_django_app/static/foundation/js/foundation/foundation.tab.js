@@ -142,7 +142,7 @@
       }
 
       // WARNING: The activation and deactivation of the tab content must
-      // occur after the deep linking in order to properly refresh the browser
+      // occur after the deep linking in myorder to properly refresh the browser
       // window (notably in Chrome).
       tab.addClass(settings.active_class).triggerHandler('opened');
       siblings.removeClass(settings.active_class);

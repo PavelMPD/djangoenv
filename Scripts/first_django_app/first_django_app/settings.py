@@ -34,9 +34,10 @@ TEMPLATE_DIRS = (
     'templates',
     'article/templates',
     'loginsys/templates',
-    'backbone/templates',
+    'mybackbone/templates',
     'notebook/templates',
     'filepicker/templates',
+    'myorder/templates',
 )
 
 # Application definition
@@ -50,9 +51,10 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'article',
     'loginsys',
-    'backbone',
+    'mybackbone',
     'notebook',
     'filepicker',
+    'myorder',
 )
 
 MIDDLEWARE_CLASSES = (

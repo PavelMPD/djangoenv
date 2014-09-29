@@ -2,7 +2,7 @@
 var app = {}
 
 $(function () {
-    //расширяю класс моделью backbone
+    //расширяю класс моделью mybackbone
     app.MyObject = Backbone.Model.extend({
         //параметры по умолчанию
         defaults: {
@@ -16,7 +16,7 @@ $(function () {
             //добавляем прослушивание события изменения объекта
             this.on('change', function(){
                 console.log('Object changed')
-                //преобразую объект backbone в JSON объект JS
+                //преобразую объект mybackbone в JSON объект JS
                 var json = app.myObject.toJSON()
                 console.log(json)
                 //возвращает json объект, который содержит только измеившуюся часть объекта
@@ -47,7 +47,7 @@ $(function () {
         description: 'new object for test'
     })
 
-    //преобразую объект backbone в JSON объект JS
+    //преобразую объект mybackbone в JSON объект JS
     var json = app.myObject.toJSON()
     console.log(json)
 

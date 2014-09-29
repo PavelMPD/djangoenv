@@ -387,7 +387,7 @@
   });
 
   // Use a comparator function to figure out the smallest index at which
-  // an object should be inserted so as to maintain order. Uses binary search.
+  // an object should be inserted so as to maintain myorder. Uses binary search.
   _.sortedIndex = function(array, obj, iteratee, context) {
     iteratee = _.iteratee(iteratee, context, 1);
     var value = iteratee(obj);
@@ -587,7 +587,7 @@
 
   // Return the position of the first occurrence of an item in an array,
   // or -1 if the item is not included in the array.
-  // If the array is large and already in sort order, pass `true`
+  // If the array is large and already in sort myorder, pass `true`
   // for **isSorted** to use binary search.
   _.indexOf = function(array, item, isSorted) {
     if (array == null) return -1;
@@ -964,7 +964,7 @@
 
   // Invokes interceptor with the obj, and then returns obj.
   // The primary purpose of this method is to "tap into" a method chain, in
-  // order to perform operations on intermediate results within the chain.
+  // myorder to perform operations on intermediate results within the chain.
   _.tap = function(obj, interceptor) {
     interceptor(obj);
     return obj;

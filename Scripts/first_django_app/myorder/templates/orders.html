@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+{% load staticfiles %}
+
+{% block body %}
+    <div>
+        <div>Order list</div>
+        <div id="order">
+        </div>
+    </div>
+{% endblock %}
+{% block javasctipt %}
+    <script type="application/javascript" src="{% static 'js/orders.js' %}"></script>
+{% endblock %}

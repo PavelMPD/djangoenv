@@ -68,7 +68,7 @@
   // Backbone.Events
   // ---------------
 
-  // A module that can be mixed in to *any object* in order to provide it with
+  // A module that can be mixed in to *any object* in myorder to provide it with
   // custom events. You may bind with `on` or remove with `off` callback
   // functions to an event; `trigger`-ing an event fires all callbacks in
   // succession.
@@ -593,11 +593,11 @@
   // table, or a collection of rows that belong together for a particular reason
   // -- all of the messages in this particular folder, all of the documents
   // belonging to this particular author, and so on. Collections maintain
-  // indexes of their models, both in order, and for lookup by `id`.
+  // indexes of their models, both in myorder, and for lookup by `id`.
 
   // Create a new **Collection**, perhaps to contain a specific type of `model`.
   // If a `comparator` is specified, the Collection will maintain
-  // its models in sort order, as they're added and removed.
+  // its models in sort myorder, as they're added and removed.
   var Collection = Backbone.Collection = function(models, options) {
     options || (options = {});
     if (options.model) this.model = options.model;
@@ -830,7 +830,7 @@
     },
 
     // Force the collection to re-sort itself. You don't need to call this under
-    // normal circumstances, as the set will maintain sort order as each item
+    // normal circumstances, as the set will maintain sort myorder as each item
     // is added.
     sort: function(options) {
       if (!this.comparator) throw new Error('Cannot sort a set without a comparator');
@@ -988,7 +988,7 @@
   // DOM. This might be a single item, an entire list, a sidebar or panel, or
   // even the surrounding frame which wraps your whole app. Defining a chunk of
   // UI as a **View** allows you to define your DOM events declaratively, without
-  // having to worry about render order ... and makes it easy for the view to
+  // having to worry about render myorder ... and makes it easy for the view to
   // react to specific changes in the state of your models.
 
   // Creating a Backbone.View creates its initial element outside of the DOM,
@@ -1024,7 +1024,7 @@
     // initialization logic.
     initialize: function(){},
 
-    // **render** is the core function that your view should override, in order
+    // **render** is the core function that your view should override, in myorder
     // to populate its element (`this.el`), with the appropriate HTML. The
     // convention is for **render** to always return `this`.
     render: function() {
@@ -1123,7 +1123,7 @@
   // * Send up the models as XML instead of JSON.
   // * Persist models via WebSockets instead of Ajax.
   //
-  // Turn on `Backbone.emulateHTTP` in order to send `PUT` and `DELETE` requests
+  // Turn on `Backbone.emulateHTTP` in myorder to send `PUT` and `DELETE` requests
   // as `POST`, with a `_method` parameter containing the true HTTP method,
   // as well as all requests with the body as `application/x-www-form-urlencoded`
   // instead of `application/json` with the model in a param named `model`.
@@ -1272,7 +1272,7 @@
     },
 
     // Bind all defined routes to `Backbone.history`. We have to reverse the
-    // order of the routes here to support behavior where the most general
+    // myorder of the routes here to support behavior where the most general
     // routes can be defined at the bottom of the route map.
     _bindRoutes: function() {
       if (!this.routes) return;
